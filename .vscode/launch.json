@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Handson6Application",
+            "request": "launch",
+            "mainClass": "com.cognizant.handson6.Handson6Application"
+        },
+        {
+            "type": "java",
+            "name": "Handson6Application",
+            "request": "launch",
+            "mainClass": "com.cognizant.handson6.Handson6Application",
+            "projectName": "com.cognizant-handson6"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Handson5Application<com.cognizant-handson5>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cognizant.handson5.Handson5Application",
+            "projectName": "com.cognizant-handson5",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

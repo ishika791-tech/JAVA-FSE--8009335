@@ -1,0 +1,9 @@
+{
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "maven.view": "flat",
+    "java.project.sourcePaths": [
+        "week_2/spring_data_jpa_handson_1/handson1/src/main/java"
+    ],
+    "java.compile.nullAnalysis.mode": "automatic"
+}
