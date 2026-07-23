@@ -1,0 +1,69 @@
+<h2>Course Enrollment</h2>
+
+<app-notification
+  [message]="notificationMessage"
+  type="success">
+</app-notification>
+
+<form #enrollForm="ngForm" (ngSubmit)="onSubmit(enrollForm)">
+
+  <label>Name</label><br>
+
+  <input
+    type="text"
+    name="name"
+    [(ngModel)]="student.name"
+    required
+    minlength="3"
+    #name="ngModel">
+
+  <div *ngIf="name.invalid && name.touched">
+    Name is required (minimum 3 characters)
+  </div>
+
+  <br><br>
+
+  <label>Email</label><br>
+
+  <input
+    type="email"
+    name="email"
+    [(ngModel)]="student.email"
+    required
+    email
+    #email="ngModel">
+
+  <div *ngIf="email.invalid && email.touched">
+    Enter a valid email
+  </div>
+
+  <br><br>
+
+  <label>Course</label><br>
+
+  <select
+    name="course"
+    [(ngModel)]="student.course"
+    required
+    #course="ngModel">
+
+    <option value="">Select Course</option>
+    <option value="Angular">Angular</option>
+    <option value="Java">Java</option>
+    <option value="Spring Boot">Spring Boot</option>
+
+  </select>
+
+  <div *ngIf="course.invalid && course.touched">
+    Select a course
+  </div>
+
+  <br><br>
+
+  <button
+    type="submit"
+    [disabled]="enrollForm.invalid">
+    Enroll
+  </button>
+
+</form>

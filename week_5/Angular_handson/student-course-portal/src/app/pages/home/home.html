@@ -1,0 +1,58 @@
+<h1>{{ portalName }}</h1>
+
+<p>
+  Manage your courses, track your GPA and view your student profile.
+</p>
+
+<button
+(click)="onEnrollClick()"
+[disabled]="!isPortalActive">
+
+Enroll Now
+
+</button>
+
+<p>{{ message }}</p>
+
+<br><br>
+
+<input
+type="text"
+placeholder="Search Course"
+[(ngModel)]="searchTerm">
+
+<p>
+
+Searching for: {{ searchTerm }}
+
+</p>
+
+<hr>
+
+<div class="stats">
+
+<div>
+
+<h2>{{ coursesAvailable }}</h2>
+
+<p>Courses Available</p>
+
+</div>
+
+<div>
+
+<h2>3</h2>
+
+<p>Enrolled</p>
+
+</div>
+
+<div>
+
+<h2>3.8</h2>
+
+<p>GPA</p>
+
+</div>
+
+</div>
